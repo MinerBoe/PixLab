@@ -11,11 +11,11 @@ import javax.swing.border.*;
  * a mouse button or press and hold a mouse button while moving the cursor. It
  * also lets you zoom in or out. You can also type in a row and column value to
  * see the color at that location.
- * 
+ *
  * Originally created for the Jython Environment for Students (JES). Modified to
  * work with DrJava by Barbara Ericson Also modified to show row and columns by
  * Barbara Ericson
- * 
+ *
  * @author Keith McDermottt, gte047w@cc.gatech.edu
  * @author Barb Ericson ericson@cc.gatech.edu
  */
@@ -100,7 +100,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Public constructor
-	 * 
+	 *
 	 * @param picture
 	 *            the picture to explore
 	 */
@@ -122,7 +122,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Set the title of the frame
-	 * 
+	 *
 	 * @param title
 	 *            the title to use in the JFrame
 	 */
@@ -298,7 +298,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Create the pixel location panel
-	 * 
+	 *
 	 * @param labelFont
 	 *            the font for the labels
 	 * @return the location panel
@@ -356,7 +356,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Create the color information panel
-	 * 
+	 *
 	 * @param labelFont
 	 *            the font to use for labels
 	 * @return the color information panel
@@ -475,7 +475,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 	/**
 	 * Zooms in the on picture by scaling the image. It is extremely memory
 	 * intensive.
-	 * 
+	 *
 	 * @param factor
 	 *            the amount to zoom by
 	 */
@@ -509,7 +509,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Called when the mouse is dragged (button held down and moved)
-	 * 
+	 *
 	 * @param e
 	 *            the mouse event
 	 */
@@ -519,7 +519,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method to check if the given x and y are in the picture
-	 * 
+	 *
 	 * @param column
 	 *            the horizontal value
 	 * @param row
@@ -537,7 +537,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 	/**
 	 * Method to display the pixel information from the passed x and y but also
 	 * converts x and y from strings
-	 * 
+	 *
 	 * @param xString
 	 *            the x value as a string from the user
 	 * @param yString
@@ -561,7 +561,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method to display pixel information for the passed x and y
-	 * 
+	 *
 	 * @param pictureX
 	 *            the x value in the picture
 	 * @param pictureY
@@ -596,7 +596,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method to display pixel information based on a mouse event
-	 * 
+	 *
 	 * @param e
 	 *            a mouse event
 	 */
@@ -632,7 +632,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method called when the mouse is moved with no buttons down
-	 * 
+	 *
 	 * @param e
 	 *            the mouse event
 	 */
@@ -641,7 +641,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method called when the mouse is clicked
-	 * 
+	 *
 	 * @param e
 	 *            the mouse event
 	 */
@@ -651,7 +651,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method called when the mouse button is pushed down
-	 * 
+	 *
 	 * @param e
 	 *            the mouse event
 	 */
@@ -661,7 +661,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method called when the mouse button is released
-	 * 
+	 *
 	 * @param e
 	 *            the mouse event
 	 */
@@ -670,7 +670,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method called when the component is entered (mouse moves over it)
-	 * 
+	 *
 	 * @param e
 	 *            the mouse event
 	 */
@@ -679,7 +679,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 	/**
 	 * Method called when the mouse moves over the component
-	 * 
+	 *
 	 * @param e
 	 *            the mouse event
 	 */
@@ -796,7 +796,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 	 * Test Main. It will explore the beach
 	 */
 	public static void main(String args[]) {
-		Picture pix = new Picture("beach.jpg");
+		Picture pix = new Picture("redPanda.jpg");
 		pix.explore();
 	}
 
