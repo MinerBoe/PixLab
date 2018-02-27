@@ -85,4 +85,20 @@ public class IntArrayWorker {
 		}
 	}
 
+	/**
+	 * loop through a 2d array and return
+	 * how many times a given value is foound
+	 */
+	public int getCount(int targetNumber) {
+		int timesFound = 0;
+		for (int row = 0; row < matrix.length; row++) {
+			for (int col = 0; col < matrix[0].length; col++) {
+				if (matrix[row][col] == targetNumber) {
+					timesFound++;
+				}
+			}
+		}
+		return timesFound;
+	}
+
 }
