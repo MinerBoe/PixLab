@@ -793,7 +793,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 	}
 
 	/**
-	 * Test Main. It will explore the beach
+	 * Test Main. It will explore the Red Panda
 	 */
 	public static void main(String args[]) {
 		Picture pix = new Picture("redPanda.jpg");
