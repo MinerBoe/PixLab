@@ -87,7 +87,7 @@ public class IntArrayWorker {
 
 	/**
 	 * loop through a 2d array and return
-	 * how many times a given value is foound
+	 * how many times a given value is found
 	 */
 	public int getCount(int targetNumber) {
 		int timesFound = 0;
@@ -99,6 +99,22 @@ public class IntArrayWorker {
 			}
 		}
 		return timesFound;
+	}
+
+	/**
+	 * loop through a 2d array and return
+	 * the largest value in the array
+	 */
+	public int getLargest() {
+		int largest = matrix[0][0];
+		for (int row = 0; row < matrix.length; row++) {
+		 	for (int col = 0; col < matrix[0].length; col++) {
+		 		if (matrix[row][col] > largest) {
+		 			largest = matrix[row][col];
+		 		}
+		 	}
+		}
+		return largest;
 	}
 
 }
