@@ -116,7 +116,11 @@ public class IntArrayWorker {
 		}
 		return largest;
 	}
-
+	
+	/**
+	 * loop through a given column and
+	 * find the total of a column
+	 */
 	public int getColTotal(int col) {
 		int colTotal = 0;
 
