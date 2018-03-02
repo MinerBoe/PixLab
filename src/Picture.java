@@ -108,7 +108,7 @@ public class Picture extends SimplePicture {
 
 	}
 
-	/** Method to test negating the image*/
+	/** Method to negate the image*/
 	public void negate() {
 
 		Pixel[][] pixels = this.getPixels2D();
@@ -117,6 +117,21 @@ public class Picture extends SimplePicture {
 				pixelObj.setRed(pixelObj.getRed()-255);
 				pixelObj.setGreen(pixelObj.getGreen()-255);
 				pixelObj.setBlue(pixelObj.getBlue()-255);
+			}
+		}
+
+	}
+
+	/** Method to grayscale the image*/
+	public void grayscale() {
+		int i = 0;
+		Pixel[][] pixels = this.getPixels2D();
+		for(Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				i = (pixelObj.getBlue() + pixelObj.getRed() + pixelObj.getGreen()) /3;
+				pixelObj.setRed(i);
+				pixelObj.setGreen(i);
+				pixelObj.setBlue(i);
 			}
 		}
 
