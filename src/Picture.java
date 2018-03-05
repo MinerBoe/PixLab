@@ -226,6 +226,29 @@ public class Picture extends SimplePicture {
 
 	}
 
+	/** Mirror picture across y = x */
+
+	public void mirrorDiagonal() {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel originalPixel = null;
+		Pixel mirroredPixel = null;
+
+		int height = pixels.length;
+		
+		for (int row = 0; row < height; row++) {
+			for (int col = 0; col < height; col++) {
+
+				originalPixel = pixels[row][col];
+				mirroredPixel = pixels[col][row];
+				originalPixel.setColor(mirroredPixel.getColor());
+
+			}
+		}
+
+
+
+	}
+
 	/** Mirror just part of a picture of a temple */
 	public void mirrorTemple() {
 		int mirrorPoint = 276;
