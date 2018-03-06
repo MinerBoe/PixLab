@@ -85,12 +85,20 @@ public class PictureTester
     water.explore();
   }
 
-   /** Method to test mirror arms */
+  /** Method to test mirror arms */
   public static void testMirrorArms() {
     Picture snowman = new Picture("snowman.jpg");
     //snowman.explore();
     snowman.mirrorArms();
     snowman.explore();
+  }
+
+  /** Method to test mirror gull */
+  public static void testMirrorGull() {
+    Picture seagull = new Picture("seagull.jpg");
+    //seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -109,8 +117,8 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
-    testMirrorArms();
-    //testMirrorGull();
+    //testMirrorArms();
+    testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();

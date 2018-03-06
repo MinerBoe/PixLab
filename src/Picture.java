@@ -227,6 +227,27 @@ public class Picture extends SimplePicture {
 
 	}
 
+	/** Mirror just the gull on the beach */
+	public void mirrorGull() {
+
+		Pixel originalPixel = null;
+		Pixel mirroredPixel = null;
+
+		Pixel[][] pixels = this.getPixels2D();
+		for(int row = 235; row < 321; row++) {
+
+			for(int col = 238; col < 345; col++) {
+
+				originalPixel = pixels[row][col];
+				mirroredPixel = pixels[row-2][col-109];
+				mirroredPixel.setColor(originalPixel.getColor());
+
+			}
+		}
+
+
+	}
+
 	/**
 	 * copy from the passed fromPic to the specified startRow and startCol in
 	 * the current picture
