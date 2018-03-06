@@ -84,6 +84,14 @@ public class PictureTester
     water.fixUnderwater();
     water.explore();
   }
+
+   /** Method to test mirror arms */
+  public static void testMirrorArms() {
+    Picture snowman = new Picture("snowman.jpg");
+    //snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -100,8 +108,8 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    testMirrorTemple();
-    //testMirrorArms();
+    //testMirrorTemple();
+    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
