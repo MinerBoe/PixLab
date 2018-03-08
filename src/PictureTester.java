@@ -100,6 +100,14 @@ public class PictureTester
     seagull.mirrorGull();
     seagull.explore();
   }
+
+  /** Method to test mirror gull */
+  public static void testCopyPart() {
+    Picture seagull = new Picture("seagull.jpg");
+    //seagull.explore();
+    seagull.createCollage();
+    seagull.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -118,9 +126,9 @@ public class PictureTester
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
