@@ -114,9 +114,9 @@ public class Picture extends SimplePicture {
 		Pixel[][] pixels = this.getPixels2D();
 		for(Pixel[] rowArray : pixels) {
 			for (Pixel pixelObj : rowArray) {
-				pixelObj.setRed(pixelObj.getRed()-255);
-				pixelObj.setGreen(pixelObj.getGreen()-255);
-				pixelObj.setBlue(pixelObj.getBlue()-255);
+				pixelObj.setRed(255-pixelObj.getRed());
+				pixelObj.setGreen(255-pixelObj.getGreen());
+				pixelObj.setBlue(255-pixelObj.getBlue());
 			}
 		}
 
@@ -306,6 +306,26 @@ public class Picture extends SimplePicture {
 		this.mirrorVertical();
 		this.write("collage.jpg");
 	}
+
+	/** Method to create a collage of several pictures */
+	public void myCollage() {
+		Picture seagull = new Picture("seagull.jpg");
+		Picture smallSeagull = seagull.scale(0.25, 0.25);
+		this.copy(smallSeagull, 0, 0);
+		Picture seagullNoBlue = new Picture(smallSeagull);
+		seagullNoBlue.zeroBlue();
+		Picture seagullNegate = new Picture(smallSeagull);
+		seagullNegate.negate();
+		Picture seagullGrayscale = new Picture(smallSeagull);
+		seagullGrayscale.grayscale();
+
+		this.copy(seagullNegate, 100, 0);
+		this.copy(seagullGrayscale, 200, 0);
+		this.copy(seagullNoBlue, 300, 0);
+		this.mirrorVertical();
+		this.write("myCollage.jpg");
+	}
+
 
 	/**
 	 * Method to show large changes in color

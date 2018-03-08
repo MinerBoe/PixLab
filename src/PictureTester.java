@@ -60,6 +60,14 @@ public class PictureTester
     canvas.createCollage();
     canvas.explore();
   }
+
+  /** Method to test the myCollage method */
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
@@ -108,6 +116,15 @@ public class PictureTester
     seagull.createCollage();
     seagull.explore();
   }
+
+  /** Method to test images*/
+  public static void testImage() {
+    Picture seagull = new Picture("flower1.jpg");
+    seagull.explore();
+
+  }
+
+
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -128,7 +145,8 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    testCollage();
+    //testImage();
+    testMyCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
