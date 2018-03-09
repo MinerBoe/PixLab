@@ -76,6 +76,13 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+  /** Method to test edgeDetection2 */
+  public static void testEdgeDetection2()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetection(20);
+    swan.explore();
+  }
 
   /** Method to test grayscale */
   public static void testGrayscale()
@@ -148,8 +155,8 @@ public class PictureTester
     //testImage();
     //testMyCollage();
     //testCopy();
-    testEdgeDetection();
-    //testEdgeDetection2();
+    //testEdgeDetection();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
