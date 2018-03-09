@@ -195,32 +195,27 @@ public class Picture extends SimplePicture {
 
 	/** Mirror the arms on the snowman */
 	public void mirrorArms() {
-
-		Pixel topPixel = null;
-		Pixel bottomPixel = null;
 		Pixel[][] pixels = this.getPixels2D();
-
-		// Mirror left arm
-		for(int row = 157; row < 191; row++) {
-
-			for(int col = 103; col < 170; col++) {
-
-				topPixel = pixels[row][col];
-				bottomPixel = pixels[row+74][col-7];
-				bottomPixel.setColor(topPixel.getColor());
-
+		// mirror left arm
+		Pixel topPixelLeft = null;
+		Pixel botPixelLeft = null;
+		int mirrorPointLeft = 170;
+		for (int row = 156; row < 192; row++) {
+			for (int col = 107; col < mirrorPointLeft; col++) {
+				topPixelLeft = pixels[row][col];
+				botPixelLeft = pixels[192 + (192 - row)][col];
+				botPixelLeft.setColor(topPixelLeft.getColor());
 			}
 		}
-
-		// Mirror right arm
-		for(int row = 171; row < 196; row++) {
-
-			for(int col = 239; col < 294; col++) {
-
-				topPixel = pixels[row][col];
-				bottomPixel = pixels[row+74][col+6];
-				bottomPixel.setColor(topPixel.getColor());
-
+		// mirror right arm
+		Pixel topPixelRight = null;
+		Pixel botPixelRight = null;
+		int mirrorPointRight = 294;
+		for (int row = 171; row < 194; row++) {
+			for (int col = 239; col < mirrorPointRight; col++) {
+				topPixelRight = pixels[row][col];
+				botPixelRight = pixels[194 + (194 - row)][col];
+				botPixelRight.setColor(topPixelRight.getColor());
 			}
 		}
 
@@ -239,7 +234,7 @@ public class Picture extends SimplePicture {
 			for(int col = 238; col < 345; col++) {
 
 				originalPixel = pixels[row][col];
-				mirroredPixel = pixels[row-2][col-109];
+				mirroredPixel = pixels[row][345 + (345-col)];
 				mirroredPixel.setColor(originalPixel.getColor());
 
 			}
